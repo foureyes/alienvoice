@@ -2,11 +2,13 @@
 <body>
 <img id="alien" src='alien.jpg' class="image-cropper" />
 
-<audio id='player' controls>
+
+<img id='honk' src='honk.jpg' class="image-cropper" />
+<img id='ghostalien' src='ghostalien.jpg' class="image-cropper" />
+ <audio id='player' controls>
   <source src="output.wav" type="audio/wav">
 Your browser does not support the audio element.
-</audio>
-<img id='honk' src='honk.jpg' class="image-cropper" />
+</audio> 
 
 <script>
     const imgs = document.querySelectorAll('.image-cropper')
@@ -23,6 +25,9 @@ Your browser does not support the audio element.
     }
 </script>
 <style>
+  #player {
+    visibility: hidden;
+  }
 .image-cropper {
     width: 150px;
     height: 150px;
@@ -30,6 +35,7 @@ Your browser does not support the audio element.
     overflow: hidden;
     border-radius: 50%;
     border: 5px solid green;
+    display: inline-block;
 }
 .profile-pic {
   display: inline;
