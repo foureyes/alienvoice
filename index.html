@@ -1,6 +1,15 @@
 <html>
 <body>
 <img src='IMG_20201205_202914.jpg' class="image-cropper" />
+<audio controls>
+  <source src="output.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio>
+<script>
+    document.querySelector('img').addEventListener('onClick', function() {
+        document.querySelector('audio').play()  
+    });
+</script>
 <style>
 .image-cropper {
     width: 150px;
