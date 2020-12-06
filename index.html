@@ -16,7 +16,9 @@ Your browser does not support the audio element.
         const playerSource = document.querySelector('#player source');
         playerSource.src = img.id + '.wav'; 
         console.log('playing audio ', playerSource.src);
-        document.querySelector('#player').play()  
+        const player = document.querySelector('#player');
+        player.load();
+        player.play();
       });
     }
 </script>
