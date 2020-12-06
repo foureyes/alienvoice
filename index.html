@@ -1,6 +1,6 @@
 <html>
 <body>
-<img src='IMG_20201205_202914.jpg' class="image-cropper" />
+<img id="alien" src='alien.jpg' class="image-cropper" />
 
 <audio id='player' controls>
   <source src="output.wav" type="audio/wav">
@@ -9,8 +9,11 @@ Your browser does not support the audio element.
 <img id='honk' src='honk.jpg' class="image-cropper" />
 
 <script>
-    document.querySelector('.image-cropper').addEventListener('click', function() {
-      console.log('playing audio');
+    document.querySelector('.image-cropper').addEventListener('click', function(evt) {
+      const img = evt.target;
+      const playerSource = document.querySelector('#player source');
+      playerSource.src = img.id + '.wav'; 
+      console.log('playing audio ', playerSource.src);
       document.querySelector('#player').play()  
     });
 </script>
